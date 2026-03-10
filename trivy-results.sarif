@@ -1,0 +1,2070 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Vulnerability Scanner",
+          "informationUri": "https://github.com/aquasecurity/trivy",
+          "name": "Trivy",
+          "rules": [
+            {
+              "id": "CVE-2026-22184",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "zlib: zlib: Arbitrary code execution via buffer overflow in untgz utility"
+              },
+              "fullDescription": {
+                "text": "zlib versions up to and including 1.3.1.2 include a global buffer overflow in the untgz utility located under contrib/untgz. The vulnerability is limited to the standalone demonstration utility and does not affect the core zlib compression library. The flaw occurs when a user executes the untgz command with an excessively long archive name supplied via the command line, leading to an out-of-bounds write in a fixed-size global buffer."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-22184",
+              "help": {
+                "text": "Vulnerability CVE-2026-22184\nSeverity: CRITICAL\nPackage: zlib\nFixed Version: 1.3.2-r0\nLink: [CVE-2026-22184](https://avd.aquasec.com/nvd/cve-2026-22184)\nzlib versions up to and including 1.3.1.2 include a global buffer overflow in the untgz utility located under contrib/untgz. The vulnerability is limited to the standalone demonstration utility and does not affect the core zlib compression library. The flaw occurs when a user executes the untgz command with an excessively long archive name supplied via the command line, leading to an out-of-bounds write in a fixed-size global buffer.",
+                "markdown": "**Vulnerability CVE-2026-22184**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|zlib|1.3.2-r0|[CVE-2026-22184](https://avd.aquasec.com/nvd/cve-2026-22184)|\n\nzlib versions up to and including 1.3.1.2 include a global buffer overflow in the untgz utility located under contrib/untgz. The vulnerability is limited to the standalone demonstration utility and does not affect the core zlib compression library. The flaw occurs when a user executes the untgz command with an excessively long archive name supplied via the command line, leading to an out-of-bounds write in a fixed-size global buffer."
+              },
+              "properties": {
+                "cvssv3_baseScore": 9.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-27171",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+              },
+              "fullDescription": {
+                "text": "zlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-27171",
+              "help": {
+                "text": "Vulnerability CVE-2026-27171\nSeverity: MEDIUM\nPackage: zlib\nFixed Version: 1.3.2-r0\nLink: [CVE-2026-27171](https://avd.aquasec.com/nvd/cve-2026-27171)\nzlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition.",
+                "markdown": "**Vulnerability CVE-2026-27171**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|zlib|1.3.2-r0|[CVE-2026-27171](https://avd.aquasec.com/nvd/cve-2026-27171)|\n\nzlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3749",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "nodejs-axios: Regular expression denial of service in trim function"
+              },
+              "fullDescription": {
+                "text": "axios is vulnerable to Inefficient Regular Expression Complexity"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-3749",
+              "help": {
+                "text": "Vulnerability CVE-2021-3749\nSeverity: HIGH\nPackage: axios\nFixed Version: 0.21.2\nLink: [CVE-2021-3749](https://avd.aquasec.com/nvd/cve-2021-3749)\naxios is vulnerable to Inefficient Regular Expression Complexity",
+                "markdown": "**Vulnerability CVE-2021-3749**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|axios|0.21.2|[CVE-2021-3749](https://avd.aquasec.com/nvd/cve-2021-3749)|\n\naxios is vulnerable to Inefficient Regular Expression Complexity"
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-27152",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "axios: Possible SSRF and Credential Leakage via Absolute URL in axios Requests"
+              },
+              "fullDescription": {
+                "text": "axios is a promise based HTTP client for the browser and node.js. The issue occurs when passing absolute URLs rather than protocol-relative URLs to axios. Even if ⁠baseURL is set, axios sends the request to the specified absolute URL, potentially causing SSRF and credential leakage. This issue impacts both server-side and client-side usage of axios. This issue is fixed in 1.8.2."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-27152",
+              "help": {
+                "text": "Vulnerability CVE-2025-27152\nSeverity: HIGH\nPackage: axios\nFixed Version: 1.8.2, 0.30.0\nLink: [CVE-2025-27152](https://avd.aquasec.com/nvd/cve-2025-27152)\naxios is a promise based HTTP client for the browser and node.js. The issue occurs when passing absolute URLs rather than protocol-relative URLs to axios. Even if ⁠baseURL is set, axios sends the request to the specified absolute URL, potentially causing SSRF and credential leakage. This issue impacts both server-side and client-side usage of axios. This issue is fixed in 1.8.2.",
+                "markdown": "**Vulnerability CVE-2025-27152**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|axios|1.8.2, 0.30.0|[CVE-2025-27152](https://avd.aquasec.com/nvd/cve-2025-27152)|\n\naxios is a promise based HTTP client for the browser and node.js. The issue occurs when passing absolute URLs rather than protocol-relative URLs to axios. Even if ⁠baseURL is set, axios sends the request to the specified absolute URL, potentially causing SSRF and credential leakage. This issue impacts both server-side and client-side usage of axios. This issue is fixed in 1.8.2."
+              },
+              "properties": {
+                "cvssv40_baseScore": 7.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-25639",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "axios: Axios affected by Denial of Service via __proto__ Key in mergeConfig"
+              },
+              "fullDescription": {
+                "text": "Axios is a promise based HTTP client for the browser and Node.js. Prior to versions 0.30.3 and 1.13.5, the mergeConfig function in axios crashes with a TypeError when processing configuration objects containing __proto__ as an own property. An attacker can trigger this by providing a malicious configuration object created via JSON.parse(), causing complete denial of service. This vulnerability is fixed in versions 0.30.3 and 1.13.5."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-25639",
+              "help": {
+                "text": "Vulnerability CVE-2026-25639\nSeverity: HIGH\nPackage: axios\nFixed Version: 1.13.5, 0.30.3\nLink: [CVE-2026-25639](https://avd.aquasec.com/nvd/cve-2026-25639)\nAxios is a promise based HTTP client for the browser and Node.js. Prior to versions 0.30.3 and 1.13.5, the mergeConfig function in axios crashes with a TypeError when processing configuration objects containing __proto__ as an own property. An attacker can trigger this by providing a malicious configuration object created via JSON.parse(), causing complete denial of service. This vulnerability is fixed in versions 0.30.3 and 1.13.5.",
+                "markdown": "**Vulnerability CVE-2026-25639**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|axios|1.13.5, 0.30.3|[CVE-2026-25639](https://avd.aquasec.com/nvd/cve-2026-25639)|\n\nAxios is a promise based HTTP client for the browser and Node.js. Prior to versions 0.30.3 and 1.13.5, the mergeConfig function in axios crashes with a TypeError when processing configuration objects containing __proto__ as an own property. An attacker can trigger this by providing a malicious configuration object created via JSON.parse(), causing complete denial of service. This vulnerability is fixed in versions 0.30.3 and 1.13.5."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-45857",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "axios: exposure of confidential data stored in cookies"
+              },
+              "fullDescription": {
+                "text": "An issue discovered in Axios 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-45857",
+              "help": {
+                "text": "Vulnerability CVE-2023-45857\nSeverity: MEDIUM\nPackage: axios\nFixed Version: 1.6.0, 0.28.0\nLink: [CVE-2023-45857](https://avd.aquasec.com/nvd/cve-2023-45857)\nAn issue discovered in Axios 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.",
+                "markdown": "**Vulnerability CVE-2023-45857**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|axios|1.6.0, 0.28.0|[CVE-2023-45857](https://avd.aquasec.com/nvd/cve-2023-45857)|\n\nAn issue discovered in Axios 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information."
+              },
+              "properties": {
+                "cvssv3_baseScore": 6.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-45590",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "body-parser: Denial of Service Vulnerability in body-parser"
+              },
+              "fullDescription": {
+                "text": "body-parser is Node.js body parsing middleware. body-parser \u003c1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-45590",
+              "help": {
+                "text": "Vulnerability CVE-2024-45590\nSeverity: HIGH\nPackage: body-parser\nFixed Version: 1.20.3\nLink: [CVE-2024-45590](https://avd.aquasec.com/nvd/cve-2024-45590)\nbody-parser is Node.js body parsing middleware. body-parser \u003c1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3.",
+                "markdown": "**Vulnerability CVE-2024-45590**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|body-parser|1.20.3|[CVE-2024-45590](https://avd.aquasec.com/nvd/cve-2024-45590)|\n\nbody-parser is Node.js body parsing middleware. body-parser \u003c1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "cvssv40_baseScore": 8.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-5889",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "brace-expansion: juliangruber brace-expansion index.js expand redos"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-5889",
+              "help": {
+                "text": "Vulnerability CVE-2025-5889\nSeverity: LOW\nPackage: brace-expansion\nFixed Version: 2.0.2, 1.1.12, 3.0.1, 4.0.1\nLink: [CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)\nA vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component.",
+                "markdown": "**Vulnerability CVE-2025-5889**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|brace-expansion|2.0.2, 1.1.12, 3.0.1, 4.0.1|[CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)|\n\nA vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component."
+              },
+              "properties": {
+                "cvssv3_baseScore": 3.1,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                "cvssv40_baseScore": 1.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "3.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-47764",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "cookie: cookie accepts cookie name, path, and domain with out of bounds characters"
+              },
+              "fullDescription": {
+                "text": "cookie is a basic HTTP cookie parser and serializer for HTTP servers. The cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. A similar escape can be used for path and domain, which could be abused to alter other fields of the cookie. Upgrade to 0.7.0, which updates the validation for name, path, and domain."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-47764",
+              "help": {
+                "text": "Vulnerability CVE-2024-47764\nSeverity: LOW\nPackage: cookie\nFixed Version: 0.7.0\nLink: [CVE-2024-47764](https://avd.aquasec.com/nvd/cve-2024-47764)\ncookie is a basic HTTP cookie parser and serializer for HTTP servers. The cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. A similar escape can be used for path and domain, which could be abused to alter other fields of the cookie. Upgrade to 0.7.0, which updates the validation for name, path, and domain.",
+                "markdown": "**Vulnerability CVE-2024-47764**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|cookie|0.7.0|[CVE-2024-47764](https://avd.aquasec.com/nvd/cve-2024-47764)|\n\ncookie is a basic HTTP cookie parser and serializer for HTTP servers. The cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. A similar escape can be used for path and domain, which could be abused to alter other fields of the cookie. Upgrade to 0.7.0, which updates the validation for name, path, and domain."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-21538",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "cross-spawn: regular expression denial of service"
+              },
+              "fullDescription": {
+                "text": "Versions of the package cross-spawn before 6.0.6, from 7.0.0 and before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-21538",
+              "help": {
+                "text": "Vulnerability CVE-2024-21538\nSeverity: HIGH\nPackage: cross-spawn\nFixed Version: 7.0.5, 6.0.6\nLink: [CVE-2024-21538](https://avd.aquasec.com/nvd/cve-2024-21538)\nVersions of the package cross-spawn before 6.0.6, from 7.0.0 and before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+                "markdown": "**Vulnerability CVE-2024-21538**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|cross-spawn|7.0.5, 6.0.6|[CVE-2024-21538](https://avd.aquasec.com/nvd/cve-2024-21538)|\n\nVersions of the package cross-spawn before 6.0.6, from 7.0.0 and before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "cvssv40_baseScore": 7.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-24001",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "jsdiff: denial of service vulnerability in parsePatch and applyPatch"
+              },
+              "fullDescription": {
+                "text": "jsdiff is a JavaScript text differencing implementation. Prior to versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1, attempting to parse a patch whose filename headers contain the line break characters `\\r`, `\\u2028`, or `\\u2029` can cause the `parsePatch` method to enter an infinite loop. It then consumes memory without limit until the process crashes due to running out of memory. Applications are therefore likely to be vulnerable to a denial-of-service attack if they call `parsePatch` with a user-provided patch as input. A large payload is not needed to trigger the vulnerability, so size limits on user input do not provide any protection. Furthermore, some applications may be vulnerable even when calling `parsePatch` on a patch generated by the application itself if the user is nonetheless able to control the filename headers (e.g. by directly providing the filenames of the files to be diffed). The `applyPatch` method is similarly affected if (and only if) called with a string representation of a patch as an argument, since under the hood it parses that string using `parsePatch`. Other methods of the library are unaffected. Finally, a second and lesser interdependent bug - a ReDOS - also exhibits when those same line break characters are present in a patch's *patch* header (also known as its \"leading garbage\"). A maliciously-crafted patch header of length *n* can take `parsePatch` O(*n*³) time to parse. Versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1 contain a fix. As a workaround, do not attempt to parse patches that contain any of these characters: `\\r`, `\\u2028`, or `\\u2029`."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-24001",
+              "help": {
+                "text": "Vulnerability CVE-2026-24001\nSeverity: LOW\nPackage: diff\nFixed Version: 8.0.3, 5.2.2, 4.0.4, 3.5.1\nLink: [CVE-2026-24001](https://avd.aquasec.com/nvd/cve-2026-24001)\njsdiff is a JavaScript text differencing implementation. Prior to versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1, attempting to parse a patch whose filename headers contain the line break characters `\\r`, `\\u2028`, or `\\u2029` can cause the `parsePatch` method to enter an infinite loop. It then consumes memory without limit until the process crashes due to running out of memory. Applications are therefore likely to be vulnerable to a denial-of-service attack if they call `parsePatch` with a user-provided patch as input. A large payload is not needed to trigger the vulnerability, so size limits on user input do not provide any protection. Furthermore, some applications may be vulnerable even when calling `parsePatch` on a patch generated by the application itself if the user is nonetheless able to control the filename headers (e.g. by directly providing the filenames of the files to be diffed). The `applyPatch` method is similarly affected if (and only if) called with a string representation of a patch as an argument, since under the hood it parses that string using `parsePatch`. Other methods of the library are unaffected. Finally, a second and lesser interdependent bug - a ReDOS - also exhibits when those same line break characters are present in a patch's *patch* header (also known as its \"leading garbage\"). A maliciously-crafted patch header of length *n* can take `parsePatch` O(*n*³) time to parse. Versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1 contain a fix. As a workaround, do not attempt to parse patches that contain any of these characters: `\\r`, `\\u2028`, or `\\u2029`.",
+                "markdown": "**Vulnerability CVE-2026-24001**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|diff|8.0.3, 5.2.2, 4.0.4, 3.5.1|[CVE-2026-24001](https://avd.aquasec.com/nvd/cve-2026-24001)|\n\njsdiff is a JavaScript text differencing implementation. Prior to versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1, attempting to parse a patch whose filename headers contain the line break characters `\\r`, `\\u2028`, or `\\u2029` can cause the `parsePatch` method to enter an infinite loop. It then consumes memory without limit until the process crashes due to running out of memory. Applications are therefore likely to be vulnerable to a denial-of-service attack if they call `parsePatch` with a user-provided patch as input. A large payload is not needed to trigger the vulnerability, so size limits on user input do not provide any protection. Furthermore, some applications may be vulnerable even when calling `parsePatch` on a patch generated by the application itself if the user is nonetheless able to control the filename headers (e.g. by directly providing the filenames of the files to be diffed). The `applyPatch` method is similarly affected if (and only if) called with a string representation of a patch as an argument, since under the hood it parses that string using `parsePatch`. Other methods of the library are unaffected. Finally, a second and lesser interdependent bug - a ReDOS - also exhibits when those same line break characters are present in a patch's *patch* header (also known as its \"leading garbage\"). A maliciously-crafted patch header of length *n* can take `parsePatch` O(*n*³) time to parse. Versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1 contain a fix. As a workaround, do not attempt to parse patches that contain any of these characters: `\\r`, `\\u2028`, or `\\u2029`."
+              },
+              "properties": {
+                "cvssv40_baseScore": 2.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-29041",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "express: cause malformed URLs to be evaluated"
+              },
+              "fullDescription": {
+                "text": "Express.js minimalist web framework for node. Versions of Express.js prior to 4.19.0 and all pre-release alpha and beta versions of 5.0 are affected by an open redirect vulnerability using malformed URLs. When a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list. The main method impacted is `res.location()` but this is also called from within `res.redirect()`. The vulnerability is fixed in 4.19.2 and 5.0.0-beta.3."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-29041",
+              "help": {
+                "text": "Vulnerability CVE-2024-29041\nSeverity: MEDIUM\nPackage: express\nFixed Version: 4.19.2, 5.0.0-beta.3\nLink: [CVE-2024-29041](https://avd.aquasec.com/nvd/cve-2024-29041)\nExpress.js minimalist web framework for node. Versions of Express.js prior to 4.19.0 and all pre-release alpha and beta versions of 5.0 are affected by an open redirect vulnerability using malformed URLs. When a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list. The main method impacted is `res.location()` but this is also called from within `res.redirect()`. The vulnerability is fixed in 4.19.2 and 5.0.0-beta.3.",
+                "markdown": "**Vulnerability CVE-2024-29041**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|express|4.19.2, 5.0.0-beta.3|[CVE-2024-29041](https://avd.aquasec.com/nvd/cve-2024-29041)|\n\nExpress.js minimalist web framework for node. Versions of Express.js prior to 4.19.0 and all pre-release alpha and beta versions of 5.0 are affected by an open redirect vulnerability using malformed URLs. When a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list. The main method impacted is `res.location()` but this is also called from within `res.redirect()`. The vulnerability is fixed in 4.19.2 and 5.0.0-beta.3."
+              },
+              "properties": {
+                "cvssv3_baseScore": 6.1,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "precision": "very-high",
+                "security-severity": "6.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-43796",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "express: Improper Input Handling in Express Redirects"
+              },
+              "fullDescription": {
+                "text": "Express.js minimalist web framework for node. In express \u003c 4.20.0, passing untrusted user input - even after sanitizing it - to response.redirect() may execute untrusted code. This issue is patched in express 4.20.0."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-43796",
+              "help": {
+                "text": "Vulnerability CVE-2024-43796\nSeverity: LOW\nPackage: express\nFixed Version: 4.20.0, 5.0.0\nLink: [CVE-2024-43796](https://avd.aquasec.com/nvd/cve-2024-43796)\nExpress.js minimalist web framework for node. In express \u003c 4.20.0, passing untrusted user input - even after sanitizing it - to response.redirect() may execute untrusted code. This issue is patched in express 4.20.0.",
+                "markdown": "**Vulnerability CVE-2024-43796**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|express|4.20.0, 5.0.0|[CVE-2024-43796](https://avd.aquasec.com/nvd/cve-2024-43796)|\n\nExpress.js minimalist web framework for node. In express \u003c 4.20.0, passing untrusted user input - even after sanitizing it - to response.redirect() may execute untrusted code. This issue is patched in express 4.20.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+                "cvssv40_baseScore": 2.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L",
+                "precision": "very-high",
+                "security-severity": "5.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-64756",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "glob: glob: Command Injection Vulnerability via Malicious Filenames"
+              },
+              "fullDescription": {
+                "text": "Glob matches files using patterns the shell uses. Starting in version 10.2.0 and prior to versions 10.5.0 and 11.1.0, the glob CLI contains a command injection vulnerability in its -c/--cmd option that allows arbitrary command execution when processing files with malicious names. When glob -c \u003ccommand\u003e \u003cpatterns\u003e are used, matched filenames are passed to a shell with shell: true, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges. This issue has been patched in versions 10.5.0 and 11.1.0."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-64756",
+              "help": {
+                "text": "Vulnerability CVE-2025-64756\nSeverity: HIGH\nPackage: glob\nFixed Version: 11.1.0, 10.5.0\nLink: [CVE-2025-64756](https://avd.aquasec.com/nvd/cve-2025-64756)\nGlob matches files using patterns the shell uses. Starting in version 10.2.0 and prior to versions 10.5.0 and 11.1.0, the glob CLI contains a command injection vulnerability in its -c/--cmd option that allows arbitrary command execution when processing files with malicious names. When glob -c \u003ccommand\u003e \u003cpatterns\u003e are used, matched filenames are passed to a shell with shell: true, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges. This issue has been patched in versions 10.5.0 and 11.1.0.",
+                "markdown": "**Vulnerability CVE-2025-64756**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|glob|11.1.0, 10.5.0|[CVE-2025-64756](https://avd.aquasec.com/nvd/cve-2025-64756)|\n\nGlob matches files using patterns the shell uses. Starting in version 10.2.0 and prior to versions 10.5.0 and 11.1.0, the glob CLI contains a command injection vulnerability in its -c/--cmd option that allows arbitrary command execution when processing files with malicious names. When glob -c \u003ccommand\u003e \u003cpatterns\u003e are used, matched filenames are passed to a shell with shell: true, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges. This issue has been patched in versions 10.5.0 and 11.1.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-23539",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "jsonwebtoken: Unrestricted key type could lead to legacy keys usagen"
+              },
+              "fullDescription": {
+                "text": "Versions `\u003c=8.5.1` of `jsonwebtoken` library could be misconfigured so that legacy, insecure key types are used for signature verification. For example, DSA keys could be used with the RS256 algorithm. You are affected if you are using an algorithm and a key type other than a combination listed in the GitHub Security Advisory as unaffected. This issue has been fixed, please update to version 9.0.0. This version validates for asymmetric key type and algorithm combinations. Please refer to the above mentioned algorithm / key type combinations for the valid secure configuration. After updating to version 9.0.0, if you still intend to continue with signing or verifying tokens using invalid key type/algorithm value combinations, you’ll need to set the `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and/or `verify()` functions."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-23539",
+              "help": {
+                "text": "Vulnerability CVE-2022-23539\nSeverity: HIGH\nPackage: jsonwebtoken\nFixed Version: 9.0.0\nLink: [CVE-2022-23539](https://avd.aquasec.com/nvd/cve-2022-23539)\nVersions `\u003c=8.5.1` of `jsonwebtoken` library could be misconfigured so that legacy, insecure key types are used for signature verification. For example, DSA keys could be used with the RS256 algorithm. You are affected if you are using an algorithm and a key type other than a combination listed in the GitHub Security Advisory as unaffected. This issue has been fixed, please update to version 9.0.0. This version validates for asymmetric key type and algorithm combinations. Please refer to the above mentioned algorithm / key type combinations for the valid secure configuration. After updating to version 9.0.0, if you still intend to continue with signing or verifying tokens using invalid key type/algorithm value combinations, you’ll need to set the `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and/or `verify()` functions.",
+                "markdown": "**Vulnerability CVE-2022-23539**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|jsonwebtoken|9.0.0|[CVE-2022-23539](https://avd.aquasec.com/nvd/cve-2022-23539)|\n\nVersions `\u003c=8.5.1` of `jsonwebtoken` library could be misconfigured so that legacy, insecure key types are used for signature verification. For example, DSA keys could be used with the RS256 algorithm. You are affected if you are using an algorithm and a key type other than a combination listed in the GitHub Security Advisory as unaffected. This issue has been fixed, please update to version 9.0.0. This version validates for asymmetric key type and algorithm combinations. Please refer to the above mentioned algorithm / key type combinations for the valid secure configuration. After updating to version 9.0.0, if you still intend to continue with signing or verifying tokens using invalid key type/algorithm value combinations, you’ll need to set the `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and/or `verify()` functions."
+              },
+              "properties": {
+                "cvssv3_baseScore": 8.1,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "8.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-23540",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "jsonwebtoken: Insecure default algorithm in jwt.verify() could lead to signature validation bypass"
+              },
+              "fullDescription": {
+                "text": "In versions `\u003c=8.5.1` of `jsonwebtoken` library, lack of algorithm definition in the `jwt.verify()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. Users are affected if you do not specify algorithms in the `jwt.verify()` function. This issue has been fixed, please update to version 9.0.0 which removes the default support for the none algorithm in the `jwt.verify()` method. There will be no impact, if you update to version 9.0.0 and you don’t need to allow for the `none` algorithm. If you need 'none' algorithm, you have to explicitly specify that in `jwt.verify()` options."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-23540",
+              "help": {
+                "text": "Vulnerability CVE-2022-23540\nSeverity: MEDIUM\nPackage: jsonwebtoken\nFixed Version: 9.0.0\nLink: [CVE-2022-23540](https://avd.aquasec.com/nvd/cve-2022-23540)\nIn versions `\u003c=8.5.1` of `jsonwebtoken` library, lack of algorithm definition in the `jwt.verify()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. Users are affected if you do not specify algorithms in the `jwt.verify()` function. This issue has been fixed, please update to version 9.0.0 which removes the default support for the none algorithm in the `jwt.verify()` method. There will be no impact, if you update to version 9.0.0 and you don’t need to allow for the `none` algorithm. If you need 'none' algorithm, you have to explicitly specify that in `jwt.verify()` options.",
+                "markdown": "**Vulnerability CVE-2022-23540**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|jsonwebtoken|9.0.0|[CVE-2022-23540](https://avd.aquasec.com/nvd/cve-2022-23540)|\n\nIn versions `\u003c=8.5.1` of `jsonwebtoken` library, lack of algorithm definition in the `jwt.verify()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. Users are affected if you do not specify algorithms in the `jwt.verify()` function. This issue has been fixed, please update to version 9.0.0 which removes the default support for the none algorithm in the `jwt.verify()` method. There will be no impact, if you update to version 9.0.0 and you don’t need to allow for the `none` algorithm. If you need 'none' algorithm, you have to explicitly specify that in `jwt.verify()` options."
+              },
+              "properties": {
+                "cvssv3_baseScore": 6.4,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+                "precision": "very-high",
+                "security-severity": "6.4",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-23541",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "jsonwebtoken: Insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC"
+              },
+              "fullDescription": {
+                "text": "jsonwebtoken is an implementation of JSON Web Tokens. Versions `\u003c= 8.5.1` of `jsonwebtoken` library can be misconfigured so that passing a poorly implemented key retrieval function referring to the `secretOrPublicKey` argument from the readme link will result in incorrect verification of tokens. There is a possibility of using a different algorithm and key combination in verification, other than the one that was used to sign the tokens. Specifically, tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm. This can lead to successful validation of  forged tokens. If your application is supporting usage of both symmetric key and asymmetric key in jwt.verify() implementation with the same key retrieval function. This issue has been patched, please update to version 9.0.0."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-23541",
+              "help": {
+                "text": "Vulnerability CVE-2022-23541\nSeverity: MEDIUM\nPackage: jsonwebtoken\nFixed Version: 9.0.0\nLink: [CVE-2022-23541](https://avd.aquasec.com/nvd/cve-2022-23541)\njsonwebtoken is an implementation of JSON Web Tokens. Versions `\u003c= 8.5.1` of `jsonwebtoken` library can be misconfigured so that passing a poorly implemented key retrieval function referring to the `secretOrPublicKey` argument from the readme link will result in incorrect verification of tokens. There is a possibility of using a different algorithm and key combination in verification, other than the one that was used to sign the tokens. Specifically, tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm. This can lead to successful validation of  forged tokens. If your application is supporting usage of both symmetric key and asymmetric key in jwt.verify() implementation with the same key retrieval function. This issue has been patched, please update to version 9.0.0.",
+                "markdown": "**Vulnerability CVE-2022-23541**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|jsonwebtoken|9.0.0|[CVE-2022-23541](https://avd.aquasec.com/nvd/cve-2022-23541)|\n\njsonwebtoken is an implementation of JSON Web Tokens. Versions `\u003c= 8.5.1` of `jsonwebtoken` library can be misconfigured so that passing a poorly implemented key retrieval function referring to the `secretOrPublicKey` argument from the readme link will result in incorrect verification of tokens. There is a possibility of using a different algorithm and key combination in verification, other than the one that was used to sign the tokens. Specifically, tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm. This can lead to successful validation of  forged tokens. If your application is supporting usage of both symmetric key and asymmetric key in jwt.verify() implementation with the same key retrieval function. This issue has been patched, please update to version 9.0.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                "precision": "very-high",
+                "security-severity": "5.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-23337",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "nodejs-lodash: command injection via template"
+              },
+              "fullDescription": {
+                "text": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-23337",
+              "help": {
+                "text": "Vulnerability CVE-2021-23337\nSeverity: HIGH\nPackage: lodash\nFixed Version: 4.17.21\nLink: [CVE-2021-23337](https://avd.aquasec.com/nvd/cve-2021-23337)\nLodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+                "markdown": "**Vulnerability CVE-2021-23337**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|lodash|4.17.21|[CVE-2021-23337](https://avd.aquasec.com/nvd/cve-2021-23337)|\n\nLodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.2,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "7.2",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-28500",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "nodejs-lodash: ReDoS via the toNumber, trim and trimEnd functions"
+              },
+              "fullDescription": {
+                "text": "Lodash versions prior to 4.17.21 are vulnerable to Regular Expression Denial of Service (ReDoS) via the toNumber, trim and trimEnd functions."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-28500",
+              "help": {
+                "text": "Vulnerability CVE-2020-28500\nSeverity: MEDIUM\nPackage: lodash\nFixed Version: 4.17.21\nLink: [CVE-2020-28500](https://avd.aquasec.com/nvd/cve-2020-28500)\nLodash versions prior to 4.17.21 are vulnerable to Regular Expression Denial of Service (ReDoS) via the toNumber, trim and trimEnd functions.",
+                "markdown": "**Vulnerability CVE-2020-28500**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|lodash|4.17.21|[CVE-2020-28500](https://avd.aquasec.com/nvd/cve-2020-28500)|\n\nLodash versions prior to 4.17.21 are vulnerable to Regular Expression Denial of Service (ReDoS) via the toNumber, trim and trimEnd functions."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.3,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-13465",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "lodash: prototype pollution in _.unset and _.omit functions"
+              },
+              "fullDescription": {
+                "text": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset and _.omit functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-13465",
+              "help": {
+                "text": "Vulnerability CVE-2025-13465\nSeverity: MEDIUM\nPackage: lodash\nFixed Version: 4.17.23\nLink: [CVE-2025-13465](https://avd.aquasec.com/nvd/cve-2025-13465)\nLodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset and _.omit functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23",
+                "markdown": "**Vulnerability CVE-2025-13465**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|lodash|4.17.23|[CVE-2025-13465](https://avd.aquasec.com/nvd/cve-2025-13465)|\n\nLodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset and _.omit functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23"
+              },
+              "properties": {
+                "cvssv3_baseScore": 6.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+                "cvssv40_baseScore": 6.9,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:H/SI:H/SA:H/E:P",
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-26996",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "minimatch: minimatch: Denial of Service via specially crafted glob patterns"
+              },
+              "fullDescription": {
+                "text": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Versions 10.2.0 and below are vulnerable to Regular Expression Denial of Service (ReDoS) when a glob pattern contains many consecutive * wildcards followed by a literal character that doesn't appear in the test string. Each * compiles to a separate [^/]*? regex group, and when the match fails, V8's regex engine backtracks exponentially across all possible splits. The time complexity is O(4^N) where N is the number of * characters. With N=15, a single minimatch() call takes ~2 seconds. With N=34, it hangs effectively forever. Any application that passes user-controlled strings to minimatch() as the pattern argument is vulnerable to DoS. This issue has been fixed in version 10.2.1."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-26996",
+              "help": {
+                "text": "Vulnerability CVE-2026-26996\nSeverity: HIGH\nPackage: minimatch\nFixed Version: 10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3\nLink: [CVE-2026-26996](https://avd.aquasec.com/nvd/cve-2026-26996)\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Versions 10.2.0 and below are vulnerable to Regular Expression Denial of Service (ReDoS) when a glob pattern contains many consecutive * wildcards followed by a literal character that doesn't appear in the test string. Each * compiles to a separate [^/]*? regex group, and when the match fails, V8's regex engine backtracks exponentially across all possible splits. The time complexity is O(4^N) where N is the number of * characters. With N=15, a single minimatch() call takes ~2 seconds. With N=34, it hangs effectively forever. Any application that passes user-controlled strings to minimatch() as the pattern argument is vulnerable to DoS. This issue has been fixed in version 10.2.1.",
+                "markdown": "**Vulnerability CVE-2026-26996**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|minimatch|10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3|[CVE-2026-26996](https://avd.aquasec.com/nvd/cve-2026-26996)|\n\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Versions 10.2.0 and below are vulnerable to Regular Expression Denial of Service (ReDoS) when a glob pattern contains many consecutive * wildcards followed by a literal character that doesn't appear in the test string. Each * compiles to a separate [^/]*? regex group, and when the match fails, V8's regex engine backtracks exponentially across all possible splits. The time complexity is O(4^N) where N is the number of * characters. With N=15, a single minimatch() call takes ~2 seconds. With N=34, it hangs effectively forever. Any application that passes user-controlled strings to minimatch() as the pattern argument is vulnerable to DoS. This issue has been fixed in version 10.2.1."
+              },
+              "properties": {
+                "cvssv40_baseScore": 8.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-27903",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns"
+              },
+              "fullDescription": {
+                "text": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-27903",
+              "help": {
+                "text": "Vulnerability CVE-2026-27903\nSeverity: HIGH\nPackage: minimatch\nFixed Version: 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3\nLink: [CVE-2026-27903](https://avd.aquasec.com/nvd/cve-2026-27903)\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
+                "markdown": "**Vulnerability CVE-2026-27903**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|minimatch|10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3|[CVE-2026-27903](https://avd.aquasec.com/nvd/cve-2026-27903)|\n\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-27904",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions"
+              },
+              "fullDescription": {
+                "text": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-27904",
+              "help": {
+                "text": "Vulnerability CVE-2026-27904\nSeverity: HIGH\nPackage: minimatch\nFixed Version: 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4\nLink: [CVE-2026-27904](https://avd.aquasec.com/nvd/cve-2026-27904)\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
+                "markdown": "**Vulnerability CVE-2026-27904**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|minimatch|10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4|[CVE-2026-27904](https://avd.aquasec.com/nvd/cve-2026-27904)|\n\nminimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-44906",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "minimist: prototype pollution"
+              },
+              "fullDescription": {
+                "text": "Minimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-44906",
+              "help": {
+                "text": "Vulnerability CVE-2021-44906\nSeverity: CRITICAL\nPackage: minimist\nFixed Version: 1.2.6, 0.2.4\nLink: [CVE-2021-44906](https://avd.aquasec.com/nvd/cve-2021-44906)\nMinimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
+                "markdown": "**Vulnerability CVE-2021-44906**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|minimist|1.2.6, 0.2.4|[CVE-2021-44906](https://avd.aquasec.com/nvd/cve-2021-44906)|\n\nMinimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95)."
+              },
+              "properties": {
+                "cvssv3_baseScore": 9.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-45296",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "path-to-regexp: Backtracking regular expressions cause ReDoS"
+              },
+              "fullDescription": {
+                "text": "path-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. Because JavaScript is single threaded and regex matching runs on the main thread, poor performance will block the event loop and lead to a DoS. The bad regular expression is generated any time you have two parameters within a single segment, separated by something that is not a period (.). For users of 0.1, upgrade to 0.1.10. All other users should upgrade to 8.0.0."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-45296",
+              "help": {
+                "text": "Vulnerability CVE-2024-45296\nSeverity: HIGH\nPackage: path-to-regexp\nFixed Version: 1.9.0, 0.1.10, 8.0.0, 3.3.0, 6.3.0\nLink: [CVE-2024-45296](https://avd.aquasec.com/nvd/cve-2024-45296)\npath-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. Because JavaScript is single threaded and regex matching runs on the main thread, poor performance will block the event loop and lead to a DoS. The bad regular expression is generated any time you have two parameters within a single segment, separated by something that is not a period (.). For users of 0.1, upgrade to 0.1.10. All other users should upgrade to 8.0.0.",
+                "markdown": "**Vulnerability CVE-2024-45296**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|path-to-regexp|1.9.0, 0.1.10, 8.0.0, 3.3.0, 6.3.0|[CVE-2024-45296](https://avd.aquasec.com/nvd/cve-2024-45296)|\n\npath-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. Because JavaScript is single threaded and regex matching runs on the main thread, poor performance will block the event loop and lead to a DoS. The bad regular expression is generated any time you have two parameters within a single segment, separated by something that is not a period (.). For users of 0.1, upgrade to 0.1.10. All other users should upgrade to 8.0.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "cvssv40_baseScore": 7.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-52798",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "path-to-regexp: path-to-regexp Unpatched `path-to-regexp` ReDoS in 0.1.x"
+              },
+              "fullDescription": {
+                "text": "path-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. The regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of path-to-regexp. Upgrade to 0.1.12. This vulnerability exists because of an incomplete fix for CVE-2024-45296."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-52798",
+              "help": {
+                "text": "Vulnerability CVE-2024-52798\nSeverity: HIGH\nPackage: path-to-regexp\nFixed Version: 0.1.12\nLink: [CVE-2024-52798](https://avd.aquasec.com/nvd/cve-2024-52798)\npath-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. The regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of path-to-regexp. Upgrade to 0.1.12. This vulnerability exists because of an incomplete fix for CVE-2024-45296.",
+                "markdown": "**Vulnerability CVE-2024-52798**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|path-to-regexp|0.1.12|[CVE-2024-52798](https://avd.aquasec.com/nvd/cve-2024-52798)|\n\npath-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. The regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of path-to-regexp. Upgrade to 0.1.12. This vulnerability exists because of an incomplete fix for CVE-2024-45296."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "cvssv40_baseScore": 7.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-24999",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "express: \"qs\" prototype poisoning causes the hang of the node process"
+              },
+              "fullDescription": {
+                "text": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b\u0026a[__proto__]\u0026a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-24999",
+              "help": {
+                "text": "Vulnerability CVE-2022-24999\nSeverity: HIGH\nPackage: qs\nFixed Version: 6.10.3, 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, 6.2.4\nLink: [CVE-2022-24999](https://avd.aquasec.com/nvd/cve-2022-24999)\nqs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b\u0026a[__proto__]\u0026a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
+                "markdown": "**Vulnerability CVE-2022-24999**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|qs|6.10.3, 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, 6.2.4|[CVE-2022-24999](https://avd.aquasec.com/nvd/cve-2022-24999)|\n\nqs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b\u0026a[__proto__]\u0026a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable)."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-15284",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "qs: qs: Denial of Service via improper input validation in array parsing"
+              },
+              "fullDescription": {
+                "text": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: \u003c 6.14.1.\n\n\nSummary\n\nThe arrayLimit option in qs did not enforce limits for bracket notation (a[]=1\u0026a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit should apply uniformly across all array notations.\n\nNote: The default parameterLimit of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit option only checked limits for indexed notation (a[0]=1\u0026a[1]=2) but did not enforce it for bracket notation (a[]=1\u0026a[]=2).\n\nVulnerable code (lib/parse.js:159-162):\n\nif (root === '[]' \u0026\u0026 options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code (lib/parse.js:175):\n\nelse if (index \u003c= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf) without validating against options.arrayLimit, while indexed notation at line 175 checks index \u003c= options.arrayLimit before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1\u0026a[]=2\u0026a[]=3\u0026a[]=4\u0026a[]=5\u0026a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction: The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit (default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit is explicitly set to a very high value."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-15284",
+              "help": {
+                "text": "Vulnerability CVE-2025-15284\nSeverity: MEDIUM\nPackage: qs\nFixed Version: 6.14.1\nLink: [CVE-2025-15284](https://avd.aquasec.com/nvd/cve-2025-15284)\nImproper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: \u003c 6.14.1.\n\n\nSummary\n\nThe arrayLimit option in qs did not enforce limits for bracket notation (a[]=1\u0026a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit should apply uniformly across all array notations.\n\nNote: The default parameterLimit of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit option only checked limits for indexed notation (a[0]=1\u0026a[1]=2) but did not enforce it for bracket notation (a[]=1\u0026a[]=2).\n\nVulnerable code (lib/parse.js:159-162):\n\nif (root === '[]' \u0026\u0026 options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code (lib/parse.js:175):\n\nelse if (index \u003c= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf) without validating against options.arrayLimit, while indexed notation at line 175 checks index \u003c= options.arrayLimit before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1\u0026a[]=2\u0026a[]=3\u0026a[]=4\u0026a[]=5\u0026a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction: The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit (default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit is explicitly set to a very high value.",
+                "markdown": "**Vulnerability CVE-2025-15284**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|qs|6.14.1|[CVE-2025-15284](https://avd.aquasec.com/nvd/cve-2025-15284)|\n\nImproper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: \u003c 6.14.1.\n\n\nSummary\n\nThe arrayLimit option in qs did not enforce limits for bracket notation (a[]=1\u0026a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit should apply uniformly across all array notations.\n\nNote: The default parameterLimit of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit option only checked limits for indexed notation (a[0]=1\u0026a[1]=2) but did not enforce it for bracket notation (a[]=1\u0026a[]=2).\n\nVulnerable code (lib/parse.js:159-162):\n\nif (root === '[]' \u0026\u0026 options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code (lib/parse.js:175):\n\nelse if (index \u003c= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf) without validating against options.arrayLimit, while indexed notation at line 175 checks index \u003c= options.arrayLimit before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1\u0026a[]=2\u0026a[]=3\u0026a[]=4\u0026a[]=5\u0026a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction: The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit (default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit is explicitly set to a very high value."
+              },
+              "properties": {
+                "cvssv3_baseScore": 3.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "cvssv40_baseScore": 6.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L",
+                "precision": "very-high",
+                "security-severity": "3.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-2391",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "qs: qs's arrayLimit bypass in comma parsing allows denial of service"
+              },
+              "fullDescription": {
+                "text": "### Summary\nThe `arrayLimit` option in qs does not enforce limits for comma-separated values when `comma: true` is enabled, allowing attackers to cause denial-of-service via memory exhaustion. This is a bypass of the array limit enforcement, similar to the bracket notation bypass addressed in GHSA-6rw7-vpxm-498p (CVE-2025-15284).\n\n### Details\nWhen the `comma` option is set to `true` (not the default, but configurable in applications), qs allows parsing comma-separated strings as arrays (e.g., `?param=a,b,c` becomes `['a', 'b', 'c']`). However, the limit check for `arrayLimit` (default: 20) and the optional throwOnLimitExceeded occur after the comma-handling logic in `parseArrayValue`, enabling a bypass. This permits creation of arbitrarily large arrays from a single parameter, leading to excessive memory allocation.\n\n**Vulnerable code** (lib/parse.js: lines ~40-50):\n```js\nif (val \u0026\u0026 typeof val === 'string' \u0026\u0026 options.comma \u0026\u0026 val.indexOf(',') \u003e -1) {\n    return val.split(',');\n}\n\nif (options.throwOnLimitExceeded \u0026\u0026 currentArrayLength \u003e= options.arrayLimit) {\n    throw new RangeError('Array limit exceeded. Only ' + options.arrayLimit + ' element' + (options.arrayLimit === 1 ? '' : 's') + ' allowed in an array.');\n}\n\nreturn val;\n```\nThe `split(',')` returns the array immediately, skipping the subsequent limit check. Downstream merging via `utils.combine` does not prevent allocation, even if it marks overflows for sparse arrays.This discrepancy allows attackers to send a single parameter with millions of commas (e.g., `?param=,,,,,,,,...`), allocating massive arrays in memory without triggering limits. It bypasses the intent of `arrayLimit`, which is enforced correctly for indexed (`a[0]=`) and bracket (`a[]=`) notations (the latter fixed in v6.14.1 per GHSA-6rw7-vpxm-498p).\n\n### PoC\n**Test 1 - Basic bypass:**\n```\nnpm install qs\n```\n\n```js\nconst qs = require('qs');\n\nconst payload = 'a=' + ','.repeat(25);  // 26 elements after split (bypasses arrayLimit: 5)\nconst options = { comma: true, arrayLimit: 5, throwOnLimitExceeded: true };\n\ntry {\n  const result = qs.parse(payload, options);\n  console.log(result.a.length);  // Outputs: 26 (bypass successful)\n} catch (e) {\n  console.log('Limit enforced:', e.message);  // Not thrown\n}\n```\n**Configuration:**\n- `comma: true`\n- `arrayLimit: 5`\n- `throwOnLimitExceeded: true`\n\nExpected: Throws \"Array limit exceeded\" error.\nActual: Parses successfully, creating an array of length 26.\n\n\n### Impact\nDenial of Service (DoS) via memory exhaustion."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-2391",
+              "help": {
+                "text": "Vulnerability CVE-2026-2391\nSeverity: LOW\nPackage: qs\nFixed Version: 6.14.2\nLink: [CVE-2026-2391](https://avd.aquasec.com/nvd/cve-2026-2391)\n### Summary\nThe `arrayLimit` option in qs does not enforce limits for comma-separated values when `comma: true` is enabled, allowing attackers to cause denial-of-service via memory exhaustion. This is a bypass of the array limit enforcement, similar to the bracket notation bypass addressed in GHSA-6rw7-vpxm-498p (CVE-2025-15284).\n\n### Details\nWhen the `comma` option is set to `true` (not the default, but configurable in applications), qs allows parsing comma-separated strings as arrays (e.g., `?param=a,b,c` becomes `['a', 'b', 'c']`). However, the limit check for `arrayLimit` (default: 20) and the optional throwOnLimitExceeded occur after the comma-handling logic in `parseArrayValue`, enabling a bypass. This permits creation of arbitrarily large arrays from a single parameter, leading to excessive memory allocation.\n\n**Vulnerable code** (lib/parse.js: lines ~40-50):\n```js\nif (val \u0026\u0026 typeof val === 'string' \u0026\u0026 options.comma \u0026\u0026 val.indexOf(',') \u003e -1) {\n    return val.split(',');\n}\n\nif (options.throwOnLimitExceeded \u0026\u0026 currentArrayLength \u003e= options.arrayLimit) {\n    throw new RangeError('Array limit exceeded. Only ' + options.arrayLimit + ' element' + (options.arrayLimit === 1 ? '' : 's') + ' allowed in an array.');\n}\n\nreturn val;\n```\nThe `split(',')` returns the array immediately, skipping the subsequent limit check. Downstream merging via `utils.combine` does not prevent allocation, even if it marks overflows for sparse arrays.This discrepancy allows attackers to send a single parameter with millions of commas (e.g., `?param=,,,,,,,,...`), allocating massive arrays in memory without triggering limits. It bypasses the intent of `arrayLimit`, which is enforced correctly for indexed (`a[0]=`) and bracket (`a[]=`) notations (the latter fixed in v6.14.1 per GHSA-6rw7-vpxm-498p).\n\n### PoC\n**Test 1 - Basic bypass:**\n```\nnpm install qs\n```\n\n```js\nconst qs = require('qs');\n\nconst payload = 'a=' + ','.repeat(25);  // 26 elements after split (bypasses arrayLimit: 5)\nconst options = { comma: true, arrayLimit: 5, throwOnLimitExceeded: true };\n\ntry {\n  const result = qs.parse(payload, options);\n  console.log(result.a.length);  // Outputs: 26 (bypass successful)\n} catch (e) {\n  console.log('Limit enforced:', e.message);  // Not thrown\n}\n```\n**Configuration:**\n- `comma: true`\n- `arrayLimit: 5`\n- `throwOnLimitExceeded: true`\n\nExpected: Throws \"Array limit exceeded\" error.\nActual: Parses successfully, creating an array of length 26.\n\n\n### Impact\nDenial of Service (DoS) via memory exhaustion.",
+                "markdown": "**Vulnerability CVE-2026-2391**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|qs|6.14.2|[CVE-2026-2391](https://avd.aquasec.com/nvd/cve-2026-2391)|\n\n### Summary\nThe `arrayLimit` option in qs does not enforce limits for comma-separated values when `comma: true` is enabled, allowing attackers to cause denial-of-service via memory exhaustion. This is a bypass of the array limit enforcement, similar to the bracket notation bypass addressed in GHSA-6rw7-vpxm-498p (CVE-2025-15284).\n\n### Details\nWhen the `comma` option is set to `true` (not the default, but configurable in applications), qs allows parsing comma-separated strings as arrays (e.g., `?param=a,b,c` becomes `['a', 'b', 'c']`). However, the limit check for `arrayLimit` (default: 20) and the optional throwOnLimitExceeded occur after the comma-handling logic in `parseArrayValue`, enabling a bypass. This permits creation of arbitrarily large arrays from a single parameter, leading to excessive memory allocation.\n\n**Vulnerable code** (lib/parse.js: lines ~40-50):\n```js\nif (val \u0026\u0026 typeof val === 'string' \u0026\u0026 options.comma \u0026\u0026 val.indexOf(',') \u003e -1) {\n    return val.split(',');\n}\n\nif (options.throwOnLimitExceeded \u0026\u0026 currentArrayLength \u003e= options.arrayLimit) {\n    throw new RangeError('Array limit exceeded. Only ' + options.arrayLimit + ' element' + (options.arrayLimit === 1 ? '' : 's') + ' allowed in an array.');\n}\n\nreturn val;\n```\nThe `split(',')` returns the array immediately, skipping the subsequent limit check. Downstream merging via `utils.combine` does not prevent allocation, even if it marks overflows for sparse arrays.This discrepancy allows attackers to send a single parameter with millions of commas (e.g., `?param=,,,,,,,,...`), allocating massive arrays in memory without triggering limits. It bypasses the intent of `arrayLimit`, which is enforced correctly for indexed (`a[0]=`) and bracket (`a[]=`) notations (the latter fixed in v6.14.1 per GHSA-6rw7-vpxm-498p).\n\n### PoC\n**Test 1 - Basic bypass:**\n```\nnpm install qs\n```\n\n```js\nconst qs = require('qs');\n\nconst payload = 'a=' + ','.repeat(25);  // 26 elements after split (bypasses arrayLimit: 5)\nconst options = { comma: true, arrayLimit: 5, throwOnLimitExceeded: true };\n\ntry {\n  const result = qs.parse(payload, options);\n  console.log(result.a.length);  // Outputs: 26 (bypass successful)\n} catch (e) {\n  console.log('Limit enforced:', e.message);  // Not thrown\n}\n```\n**Configuration:**\n- `comma: true`\n- `arrayLimit: 5`\n- `throwOnLimitExceeded: true`\n\nExpected: Throws \"Array limit exceeded\" error.\nActual: Parses successfully, creating an array of length 26.\n\n\n### Impact\nDenial of Service (DoS) via memory exhaustion."
+              },
+              "properties": {
+                "cvssv3_baseScore": 3.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "precision": "very-high",
+                "security-severity": "3.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-43799",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "send: Code Execution Vulnerability in Send Library"
+              },
+              "fullDescription": {
+                "text": "Send is a library for streaming files from the file system as a http response. Send passes untrusted user input to SendStream.redirect() which executes untrusted code. This issue is patched in send 0.19.0."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-43799",
+              "help": {
+                "text": "Vulnerability CVE-2024-43799\nSeverity: LOW\nPackage: send\nFixed Version: 0.19.0\nLink: [CVE-2024-43799](https://avd.aquasec.com/nvd/cve-2024-43799)\nSend is a library for streaming files from the file system as a http response. Send passes untrusted user input to SendStream.redirect() which executes untrusted code. This issue is patched in send 0.19.0.",
+                "markdown": "**Vulnerability CVE-2024-43799**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|send|0.19.0|[CVE-2024-43799](https://avd.aquasec.com/nvd/cve-2024-43799)|\n\nSend is a library for streaming files from the file system as a http response. Send passes untrusted user input to SendStream.redirect() which executes untrusted code. This issue is patched in send 0.19.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+                "cvssv40_baseScore": 2.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L",
+                "precision": "very-high",
+                "security-severity": "5.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-43800",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "serve-static: Improper Sanitization in serve-static"
+              },
+              "fullDescription": {
+                "text": "serve-static serves static files. serve-static passes untrusted user input - even after sanitizing it - to redirect() may execute untrusted code. This issue is patched in serve-static 1.16.0."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-43800",
+              "help": {
+                "text": "Vulnerability CVE-2024-43800\nSeverity: LOW\nPackage: serve-static\nFixed Version: 1.16.0, 2.1.0\nLink: [CVE-2024-43800](https://avd.aquasec.com/nvd/cve-2024-43800)\nserve-static serves static files. serve-static passes untrusted user input - even after sanitizing it - to redirect() may execute untrusted code. This issue is patched in serve-static 1.16.0.",
+                "markdown": "**Vulnerability CVE-2024-43800**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|serve-static|1.16.0, 2.1.0|[CVE-2024-43800](https://avd.aquasec.com/nvd/cve-2024-43800)|\n\nserve-static serves static files. serve-static passes untrusted user input - even after sanitizing it - to redirect() may execute untrusted code. This issue is patched in serve-static 1.16.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+                "cvssv40_baseScore": 2.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L",
+                "precision": "very-high",
+                "security-severity": "5.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-23745",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives"
+              },
+              "fullDescription": {
+                "text": "node-tar is a Tar for Node.js. The node-tar library (\u003c= 7.5.2) fails to sanitize the linkpath of Link (hardlink) and SymbolicLink entries when preservePaths is false (the default secure behavior). This allows malicious archives to bypass the extraction root restriction, leading to Arbitrary File Overwrite via hardlinks and Symlink Poisoning via absolute symlink targets. This vulnerability is fixed in 7.5.3."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-23745",
+              "help": {
+                "text": "Vulnerability CVE-2026-23745\nSeverity: HIGH\nPackage: tar\nFixed Version: 7.5.3\nLink: [CVE-2026-23745](https://avd.aquasec.com/nvd/cve-2026-23745)\nnode-tar is a Tar for Node.js. The node-tar library (\u003c= 7.5.2) fails to sanitize the linkpath of Link (hardlink) and SymbolicLink entries when preservePaths is false (the default secure behavior). This allows malicious archives to bypass the extraction root restriction, leading to Arbitrary File Overwrite via hardlinks and Symlink Poisoning via absolute symlink targets. This vulnerability is fixed in 7.5.3.",
+                "markdown": "**Vulnerability CVE-2026-23745**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|tar|7.5.3|[CVE-2026-23745](https://avd.aquasec.com/nvd/cve-2026-23745)|\n\nnode-tar is a Tar for Node.js. The node-tar library (\u003c= 7.5.2) fails to sanitize the linkpath of Link (hardlink) and SymbolicLink entries when preservePaths is false (the default secure behavior). This allows malicious archives to bypass the extraction root restriction, leading to Arbitrary File Overwrite via hardlinks and Symlink Poisoning via absolute symlink targets. This vulnerability is fixed in 7.5.3."
+              },
+              "properties": {
+                "cvssv40_baseScore": 8.2,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-23950",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition"
+              },
+              "fullDescription": {
+                "text": "node-tar,a Tar for Node.js, has a race condition vulnerability in versions up to and including 7.5.3. This is due to an incomplete handling of Unicode path collisions in the `path-reservations` system. On case-insensitive or normalization-insensitive filesystems (such as macOS APFS, In which it has been tested), the library fails to lock colliding paths (e.g., `ß` and `ss`), allowing them to be processed in parallel. This bypasses the library's internal concurrency safeguards and permits Symlink Poisoning attacks via race conditions. The library uses a `PathReservations` system to ensure that metadata checks and file operations for the same path are serialized. This prevents race conditions where one entry might clobber another concurrently. This is a Race Condition which enables Arbitrary File Overwrite. This vulnerability affects users and systems using node-tar on macOS (APFS/HFS+). Because of using `NFD` Unicode normalization (in which `ß` and `ss` are different), conflicting paths do not have their order properly preserved under filesystems that ignore Unicode normalization (e.g., APFS (in which `ß` causes an inode collision with `ss`)). This enables an attacker to circumvent internal parallelization locks (`PathReservations`) using conflicting filenames within a malicious tar archive. The patch in version 7.5.4 updates `path-reservations.js` to use a normalization form that matches the target filesystem's behavior (e.g., `NFKD`), followed by first `toLocaleLowerCase('en')` and then `toLocaleUpperCase('en')`. As a workaround, users who cannot upgrade promptly, and who are programmatically using `node-tar` to extract arbitrary tarball data should filter out all `SymbolicLink` entries (as npm does) to defend against arbitrary file writes via this file system entry name collision issue."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-23950",
+              "help": {
+                "text": "Vulnerability CVE-2026-23950\nSeverity: HIGH\nPackage: tar\nFixed Version: 7.5.4\nLink: [CVE-2026-23950](https://avd.aquasec.com/nvd/cve-2026-23950)\nnode-tar,a Tar for Node.js, has a race condition vulnerability in versions up to and including 7.5.3. This is due to an incomplete handling of Unicode path collisions in the `path-reservations` system. On case-insensitive or normalization-insensitive filesystems (such as macOS APFS, In which it has been tested), the library fails to lock colliding paths (e.g., `ß` and `ss`), allowing them to be processed in parallel. This bypasses the library's internal concurrency safeguards and permits Symlink Poisoning attacks via race conditions. The library uses a `PathReservations` system to ensure that metadata checks and file operations for the same path are serialized. This prevents race conditions where one entry might clobber another concurrently. This is a Race Condition which enables Arbitrary File Overwrite. This vulnerability affects users and systems using node-tar on macOS (APFS/HFS+). Because of using `NFD` Unicode normalization (in which `ß` and `ss` are different), conflicting paths do not have their order properly preserved under filesystems that ignore Unicode normalization (e.g., APFS (in which `ß` causes an inode collision with `ss`)). This enables an attacker to circumvent internal parallelization locks (`PathReservations`) using conflicting filenames within a malicious tar archive. The patch in version 7.5.4 updates `path-reservations.js` to use a normalization form that matches the target filesystem's behavior (e.g., `NFKD`), followed by first `toLocaleLowerCase('en')` and then `toLocaleUpperCase('en')`. As a workaround, users who cannot upgrade promptly, and who are programmatically using `node-tar` to extract arbitrary tarball data should filter out all `SymbolicLink` entries (as npm does) to defend against arbitrary file writes via this file system entry name collision issue.",
+                "markdown": "**Vulnerability CVE-2026-23950**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|tar|7.5.4|[CVE-2026-23950](https://avd.aquasec.com/nvd/cve-2026-23950)|\n\nnode-tar,a Tar for Node.js, has a race condition vulnerability in versions up to and including 7.5.3. This is due to an incomplete handling of Unicode path collisions in the `path-reservations` system. On case-insensitive or normalization-insensitive filesystems (such as macOS APFS, In which it has been tested), the library fails to lock colliding paths (e.g., `ß` and `ss`), allowing them to be processed in parallel. This bypasses the library's internal concurrency safeguards and permits Symlink Poisoning attacks via race conditions. The library uses a `PathReservations` system to ensure that metadata checks and file operations for the same path are serialized. This prevents race conditions where one entry might clobber another concurrently. This is a Race Condition which enables Arbitrary File Overwrite. This vulnerability affects users and systems using node-tar on macOS (APFS/HFS+). Because of using `NFD` Unicode normalization (in which `ß` and `ss` are different), conflicting paths do not have their order properly preserved under filesystems that ignore Unicode normalization (e.g., APFS (in which `ß` causes an inode collision with `ss`)). This enables an attacker to circumvent internal parallelization locks (`PathReservations`) using conflicting filenames within a malicious tar archive. The patch in version 7.5.4 updates `path-reservations.js` to use a normalization form that matches the target filesystem's behavior (e.g., `NFKD`), followed by first `toLocaleLowerCase('en')` and then `toLocaleUpperCase('en')`. As a workaround, users who cannot upgrade promptly, and who are programmatically using `node-tar` to extract arbitrary tarball data should filter out all `SymbolicLink` entries (as npm does) to defend against arbitrary file writes via this file system entry name collision issue."
+              },
+              "properties": {
+                "cvssv3_baseScore": 8.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L",
+                "precision": "very-high",
+                "security-severity": "8.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-24842",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check"
+              },
+              "fullDescription": {
+                "text": "node-tar,a Tar for Node.js, contains a vulnerability in versions prior to 7.5.7 where the security check for hardlink entries uses different path resolution semantics than the actual hardlink creation logic. This mismatch allows an attacker to craft a malicious TAR archive that bypasses path traversal protections and creates hardlinks to arbitrary files outside the extraction directory. Version 7.5.7 contains a fix for the issue."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-24842",
+              "help": {
+                "text": "Vulnerability CVE-2026-24842\nSeverity: HIGH\nPackage: tar\nFixed Version: 7.5.7\nLink: [CVE-2026-24842](https://avd.aquasec.com/nvd/cve-2026-24842)\nnode-tar,a Tar for Node.js, contains a vulnerability in versions prior to 7.5.7 where the security check for hardlink entries uses different path resolution semantics than the actual hardlink creation logic. This mismatch allows an attacker to craft a malicious TAR archive that bypasses path traversal protections and creates hardlinks to arbitrary files outside the extraction directory. Version 7.5.7 contains a fix for the issue.",
+                "markdown": "**Vulnerability CVE-2026-24842**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|tar|7.5.7|[CVE-2026-24842](https://avd.aquasec.com/nvd/cve-2026-24842)|\n\nnode-tar,a Tar for Node.js, contains a vulnerability in versions prior to 7.5.7 where the security check for hardlink entries uses different path resolution semantics than the actual hardlink creation logic. This mismatch allows an attacker to craft a malicious TAR archive that bypasses path traversal protections and creates hardlinks to arbitrary files outside the extraction directory. Version 7.5.7 contains a fix for the issue."
+              },
+              "properties": {
+                "cvssv3_baseScore": 8.2,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                "precision": "very-high",
+                "security-severity": "8.2",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-26960",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tar: node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation"
+              },
+              "fullDescription": {
+                "text": "node-tar is a full-featured Tar for Node.js. When using default options in versions 7.5.7 and below, an attacker-controlled archive can create a hardlink inside the extraction directory that points to a file outside the extraction root, enabling arbitrary file read and write as the extracting user. Severity is high because the primitive bypasses path protections and turns archive extraction into a direct filesystem access primitive. This issue has been fixed in version 7.5.8."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-26960",
+              "help": {
+                "text": "Vulnerability CVE-2026-26960\nSeverity: HIGH\nPackage: tar\nFixed Version: 7.5.8\nLink: [CVE-2026-26960](https://avd.aquasec.com/nvd/cve-2026-26960)\nnode-tar is a full-featured Tar for Node.js. When using default options in versions 7.5.7 and below, an attacker-controlled archive can create a hardlink inside the extraction directory that points to a file outside the extraction root, enabling arbitrary file read and write as the extracting user. Severity is high because the primitive bypasses path protections and turns archive extraction into a direct filesystem access primitive. This issue has been fixed in version 7.5.8.",
+                "markdown": "**Vulnerability CVE-2026-26960**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|tar|7.5.8|[CVE-2026-26960](https://avd.aquasec.com/nvd/cve-2026-26960)|\n\nnode-tar is a full-featured Tar for Node.js. When using default options in versions 7.5.7 and below, an attacker-controlled archive can create a hardlink inside the extraction directory that points to a file outside the extraction root, enabling arbitrary file read and write as the extracting user. Severity is high because the primitive bypasses path protections and turns archive extraction into a direct filesystem access primitive. This issue has been fixed in version 7.5.8."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.1,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "7.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-29786",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "node-tar: hardlink path traversal via drive-relative linkpath"
+              },
+              "fullDescription": {
+                "text": "node-tar is a full-featured Tar for Node.js. Prior to version 7.5.10, tar can be tricked into creating a hardlink that points outside the extraction directory by using a drive-relative link target such as C:../target.txt, which enables file overwrite outside cwd during normal tar.x() extraction. This issue has been patched in version 7.5.10."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-29786",
+              "help": {
+                "text": "Vulnerability CVE-2026-29786\nSeverity: HIGH\nPackage: tar\nFixed Version: 7.5.10\nLink: [CVE-2026-29786](https://avd.aquasec.com/nvd/cve-2026-29786)\nnode-tar is a full-featured Tar for Node.js. Prior to version 7.5.10, tar can be tricked into creating a hardlink that points outside the extraction directory by using a drive-relative link target such as C:../target.txt, which enables file overwrite outside cwd during normal tar.x() extraction. This issue has been patched in version 7.5.10.",
+                "markdown": "**Vulnerability CVE-2026-29786**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|tar|7.5.10|[CVE-2026-29786](https://avd.aquasec.com/nvd/cve-2026-29786)|\n\nnode-tar is a full-featured Tar for Node.js. Prior to version 7.5.10, tar can be tricked into creating a hardlink that points outside the extraction directory by using a drive-relative link target such as C:../target.txt, which enables file overwrite outside cwd during normal tar.x() extraction. This issue has been patched in version 7.5.10."
+              },
+              "properties": {
+                "cvssv40_baseScore": 8.2,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:H/SA:L",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            }
+          ],
+          "version": "0.69.3"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2026-22184",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Package: zlib\nInstalled Version: 1.3.1-r2\nVulnerability CVE-2026-22184\nSeverity: CRITICAL\nFixed Version: 1.3.2-r0\nLink: [CVE-2026-22184](https://avd.aquasec.com/nvd/cve-2026-22184)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/vulnerable-app",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/vulnerable-app: zlib@1.3.1-r2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-27171",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: zlib\nInstalled Version: 1.3.1-r2\nVulnerability CVE-2026-27171\nSeverity: MEDIUM\nFixed Version: 1.3.2-r0\nLink: [CVE-2026-27171](https://avd.aquasec.com/nvd/cve-2026-27171)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/vulnerable-app",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/vulnerable-app: zlib@1.3.1-r2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3749",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Package: axios\nInstalled Version: 0.21.1\nVulnerability CVE-2021-3749\nSeverity: HIGH\nFixed Version: 0.21.2\nLink: [CVE-2021-3749](https://avd.aquasec.com/nvd/cve-2021-3749)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/axios/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/axios/package.json: axios@0.21.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-27152",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: axios\nInstalled Version: 0.21.1\nVulnerability CVE-2025-27152\nSeverity: HIGH\nFixed Version: 1.8.2, 0.30.0\nLink: [CVE-2025-27152](https://avd.aquasec.com/nvd/cve-2025-27152)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/axios/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/axios/package.json: axios@0.21.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-25639",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: axios\nInstalled Version: 0.21.1\nVulnerability CVE-2026-25639\nSeverity: HIGH\nFixed Version: 1.13.5, 0.30.3\nLink: [CVE-2026-25639](https://avd.aquasec.com/nvd/cve-2026-25639)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/axios/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/axios/package.json: axios@0.21.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-45857",
+          "ruleIndex": 5,
+          "level": "warning",
+          "message": {
+            "text": "Package: axios\nInstalled Version: 0.21.1\nVulnerability CVE-2023-45857\nSeverity: MEDIUM\nFixed Version: 1.6.0, 0.28.0\nLink: [CVE-2023-45857](https://avd.aquasec.com/nvd/cve-2023-45857)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/axios/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/axios/package.json: axios@0.21.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-45590",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: body-parser\nInstalled Version: 1.19.0\nVulnerability CVE-2024-45590\nSeverity: HIGH\nFixed Version: 1.20.3\nLink: [CVE-2024-45590](https://avd.aquasec.com/nvd/cve-2024-45590)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/body-parser/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/body-parser/package.json: body-parser@1.19.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-5889",
+          "ruleIndex": 7,
+          "level": "note",
+          "message": {
+            "text": "Package: brace-expansion\nInstalled Version: 2.0.1\nVulnerability CVE-2025-5889\nSeverity: LOW\nFixed Version: 2.0.2, 1.1.12, 3.0.1, 4.0.1\nLink: [CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/brace-expansion/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/brace-expansion/package.json: brace-expansion@2.0.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-47764",
+          "ruleIndex": 8,
+          "level": "note",
+          "message": {
+            "text": "Package: cookie\nInstalled Version: 0.4.0\nVulnerability CVE-2024-47764\nSeverity: LOW\nFixed Version: 0.7.0\nLink: [CVE-2024-47764](https://avd.aquasec.com/nvd/cve-2024-47764)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/cookie/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/cookie/package.json: cookie@0.4.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-21538",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Package: cross-spawn\nInstalled Version: 7.0.3\nVulnerability CVE-2024-21538\nSeverity: HIGH\nFixed Version: 7.0.5, 6.0.6\nLink: [CVE-2024-21538](https://avd.aquasec.com/nvd/cve-2024-21538)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/cross-spawn/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/cross-spawn/package.json: cross-spawn@7.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-24001",
+          "ruleIndex": 10,
+          "level": "note",
+          "message": {
+            "text": "Package: diff\nInstalled Version: 5.2.0\nVulnerability CVE-2026-24001\nSeverity: LOW\nFixed Version: 8.0.3, 5.2.2, 4.0.4, 3.5.1\nLink: [CVE-2026-24001](https://avd.aquasec.com/nvd/cve-2026-24001)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/diff/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/diff/package.json: diff@5.2.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-29041",
+          "ruleIndex": 11,
+          "level": "warning",
+          "message": {
+            "text": "Package: express\nInstalled Version: 4.17.1\nVulnerability CVE-2024-29041\nSeverity: MEDIUM\nFixed Version: 4.19.2, 5.0.0-beta.3\nLink: [CVE-2024-29041](https://avd.aquasec.com/nvd/cve-2024-29041)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/express/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/express/package.json: express@4.17.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-43796",
+          "ruleIndex": 12,
+          "level": "note",
+          "message": {
+            "text": "Package: express\nInstalled Version: 4.17.1\nVulnerability CVE-2024-43796\nSeverity: LOW\nFixed Version: 4.20.0, 5.0.0\nLink: [CVE-2024-43796](https://avd.aquasec.com/nvd/cve-2024-43796)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/express/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/express/package.json: express@4.17.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-64756",
+          "ruleIndex": 13,
+          "level": "error",
+          "message": {
+            "text": "Package: glob\nInstalled Version: 10.4.2\nVulnerability CVE-2025-64756\nSeverity: HIGH\nFixed Version: 11.1.0, 10.5.0\nLink: [CVE-2025-64756](https://avd.aquasec.com/nvd/cve-2025-64756)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/glob/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/glob/package.json: glob@10.4.2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-23539",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "Package: jsonwebtoken\nInstalled Version: 8.5.1\nVulnerability CVE-2022-23539\nSeverity: HIGH\nFixed Version: 9.0.0\nLink: [CVE-2022-23539](https://avd.aquasec.com/nvd/cve-2022-23539)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/jsonwebtoken/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/jsonwebtoken/package.json: jsonwebtoken@8.5.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-23540",
+          "ruleIndex": 15,
+          "level": "warning",
+          "message": {
+            "text": "Package: jsonwebtoken\nInstalled Version: 8.5.1\nVulnerability CVE-2022-23540\nSeverity: MEDIUM\nFixed Version: 9.0.0\nLink: [CVE-2022-23540](https://avd.aquasec.com/nvd/cve-2022-23540)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/jsonwebtoken/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/jsonwebtoken/package.json: jsonwebtoken@8.5.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-23541",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: jsonwebtoken\nInstalled Version: 8.5.1\nVulnerability CVE-2022-23541\nSeverity: MEDIUM\nFixed Version: 9.0.0\nLink: [CVE-2022-23541](https://avd.aquasec.com/nvd/cve-2022-23541)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/jsonwebtoken/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/jsonwebtoken/package.json: jsonwebtoken@8.5.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23337",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Package: lodash\nInstalled Version: 4.17.20\nVulnerability CVE-2021-23337\nSeverity: HIGH\nFixed Version: 4.17.21\nLink: [CVE-2021-23337](https://avd.aquasec.com/nvd/cve-2021-23337)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/lodash/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/lodash/package.json: lodash@4.17.20"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-28500",
+          "ruleIndex": 18,
+          "level": "warning",
+          "message": {
+            "text": "Package: lodash\nInstalled Version: 4.17.20\nVulnerability CVE-2020-28500\nSeverity: MEDIUM\nFixed Version: 4.17.21\nLink: [CVE-2020-28500](https://avd.aquasec.com/nvd/cve-2020-28500)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/lodash/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/lodash/package.json: lodash@4.17.20"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-13465",
+          "ruleIndex": 19,
+          "level": "warning",
+          "message": {
+            "text": "Package: lodash\nInstalled Version: 4.17.20\nVulnerability CVE-2025-13465\nSeverity: MEDIUM\nFixed Version: 4.17.23\nLink: [CVE-2025-13465](https://avd.aquasec.com/nvd/cve-2025-13465)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/lodash/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/lodash/package.json: lodash@4.17.20"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-26996",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Package: minimatch\nInstalled Version: 9.0.5\nVulnerability CVE-2026-26996\nSeverity: HIGH\nFixed Version: 10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3\nLink: [CVE-2026-26996](https://avd.aquasec.com/nvd/cve-2026-26996)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json: minimatch@9.0.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-27903",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Package: minimatch\nInstalled Version: 9.0.5\nVulnerability CVE-2026-27903\nSeverity: HIGH\nFixed Version: 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3\nLink: [CVE-2026-27903](https://avd.aquasec.com/nvd/cve-2026-27903)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json: minimatch@9.0.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-27904",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: minimatch\nInstalled Version: 9.0.5\nVulnerability CVE-2026-27904\nSeverity: HIGH\nFixed Version: 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4\nLink: [CVE-2026-27904](https://avd.aquasec.com/nvd/cve-2026-27904)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/minimatch/package.json: minimatch@9.0.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-44906",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: minimist\nInstalled Version: 1.2.5\nVulnerability CVE-2021-44906\nSeverity: CRITICAL\nFixed Version: 1.2.6, 0.2.4\nLink: [CVE-2021-44906](https://avd.aquasec.com/nvd/cve-2021-44906)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/minimist/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/minimist/package.json: minimist@1.2.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-45296",
+          "ruleIndex": 24,
+          "level": "error",
+          "message": {
+            "text": "Package: path-to-regexp\nInstalled Version: 0.1.7\nVulnerability CVE-2024-45296\nSeverity: HIGH\nFixed Version: 1.9.0, 0.1.10, 8.0.0, 3.3.0, 6.3.0\nLink: [CVE-2024-45296](https://avd.aquasec.com/nvd/cve-2024-45296)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/path-to-regexp/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/path-to-regexp/package.json: path-to-regexp@0.1.7"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-52798",
+          "ruleIndex": 25,
+          "level": "error",
+          "message": {
+            "text": "Package: path-to-regexp\nInstalled Version: 0.1.7\nVulnerability CVE-2024-52798\nSeverity: HIGH\nFixed Version: 0.1.12\nLink: [CVE-2024-52798](https://avd.aquasec.com/nvd/cve-2024-52798)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/path-to-regexp/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/path-to-regexp/package.json: path-to-regexp@0.1.7"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-24999",
+          "ruleIndex": 26,
+          "level": "error",
+          "message": {
+            "text": "Package: qs\nInstalled Version: 6.7.0\nVulnerability CVE-2022-24999\nSeverity: HIGH\nFixed Version: 6.10.3, 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, 6.2.4\nLink: [CVE-2022-24999](https://avd.aquasec.com/nvd/cve-2022-24999)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/qs/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/qs/package.json: qs@6.7.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-15284",
+          "ruleIndex": 27,
+          "level": "warning",
+          "message": {
+            "text": "Package: qs\nInstalled Version: 6.7.0\nVulnerability CVE-2025-15284\nSeverity: MEDIUM\nFixed Version: 6.14.1\nLink: [CVE-2025-15284](https://avd.aquasec.com/nvd/cve-2025-15284)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/qs/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/qs/package.json: qs@6.7.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-2391",
+          "ruleIndex": 28,
+          "level": "note",
+          "message": {
+            "text": "Package: qs\nInstalled Version: 6.7.0\nVulnerability CVE-2026-2391\nSeverity: LOW\nFixed Version: 6.14.2\nLink: [CVE-2026-2391](https://avd.aquasec.com/nvd/cve-2026-2391)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/qs/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/qs/package.json: qs@6.7.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-43799",
+          "ruleIndex": 29,
+          "level": "note",
+          "message": {
+            "text": "Package: send\nInstalled Version: 0.17.1\nVulnerability CVE-2024-43799\nSeverity: LOW\nFixed Version: 0.19.0\nLink: [CVE-2024-43799](https://avd.aquasec.com/nvd/cve-2024-43799)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/send/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/send/package.json: send@0.17.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-43800",
+          "ruleIndex": 30,
+          "level": "note",
+          "message": {
+            "text": "Package: serve-static\nInstalled Version: 1.14.1\nVulnerability CVE-2024-43800\nSeverity: LOW\nFixed Version: 1.16.0, 2.1.0\nLink: [CVE-2024-43800](https://avd.aquasec.com/nvd/cve-2024-43800)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/node_modules/serve-static/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "app/node_modules/serve-static/package.json: serve-static@1.14.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-23745",
+          "ruleIndex": 31,
+          "level": "error",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 6.2.1\nVulnerability CVE-2026-23745\nSeverity: HIGH\nFixed Version: 7.5.3\nLink: [CVE-2026-23745](https://avd.aquasec.com/nvd/cve-2026-23745)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/tar/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/tar/package.json: tar@6.2.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-23950",
+          "ruleIndex": 32,
+          "level": "error",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 6.2.1\nVulnerability CVE-2026-23950\nSeverity: HIGH\nFixed Version: 7.5.4\nLink: [CVE-2026-23950](https://avd.aquasec.com/nvd/cve-2026-23950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/tar/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/tar/package.json: tar@6.2.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-24842",
+          "ruleIndex": 33,
+          "level": "error",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 6.2.1\nVulnerability CVE-2026-24842\nSeverity: HIGH\nFixed Version: 7.5.7\nLink: [CVE-2026-24842](https://avd.aquasec.com/nvd/cve-2026-24842)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/tar/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/tar/package.json: tar@6.2.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-26960",
+          "ruleIndex": 34,
+          "level": "error",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 6.2.1\nVulnerability CVE-2026-26960\nSeverity: HIGH\nFixed Version: 7.5.8\nLink: [CVE-2026-26960](https://avd.aquasec.com/nvd/cve-2026-26960)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/tar/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/tar/package.json: tar@6.2.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-29786",
+          "ruleIndex": 35,
+          "level": "error",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 6.2.1\nVulnerability CVE-2026-29786\nSeverity: HIGH\nFixed Version: 7.5.10\nLink: [CVE-2026-29786](https://avd.aquasec.com/nvd/cve-2026-29786)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/node_modules/npm/node_modules/tar/package.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/node_modules/npm/node_modules/tar/package.json: tar@6.2.1"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "originalUriBaseIds": {
+        "ROOTPATH": {
+          "uri": "file:///"
+        }
+      },
+      "properties": {
+        "imageID": "sha256:ddc713a3a7663d650dd3b935cfcc9d26341e371190d3fcea95e49a62550e58e3",
+        "imageName": "vulnerable-app:v1",
+        "repoDigests": [
+          "vulnerable-app@sha256:ddc713a3a7663d650dd3b935cfcc9d26341e371190d3fcea95e49a62550e58e3"
+        ],
+        "repoTags": [
+          "vulnerable-app:v1"
+        ]
+      }
+    }
+  ]
+}
